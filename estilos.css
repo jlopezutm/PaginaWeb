@@ -1,0 +1,47 @@
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('imagenes/chef.avif');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  }
+  
+  .contenedor {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+  
+  #iniciar {
+    background-color: #337ab7;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+  
+  #iniciar:hover {
+    background-color: #23527c;
+  }
+  
+  @media only screen and (max-width: 768px) {
+    .contenedor {
+      top: 40%;
+    }
+    #iniciar {
+      padding: 5px 10px;
+    }
+  }
+  
+  @media only screen and (max-width: 480px) {
+    .contenedor {
+      top: 30%;
+    }
+    #iniciar {
+      padding: 5px 5px;
+    }
+  }

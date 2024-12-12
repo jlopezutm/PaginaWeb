@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pasta con Carne</title>
+    <link rel="stylesheet" href="estilos-menu.css">
+    <style>
+        body {
+            background-color: #333;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <h1>Pasta con Carne</h1>
+    <p>Tiempo de preparación: 25 minutos</p>
+    <p>Ingredientes:</p>
+    <ul>
+        <li>Pasta fresca</li>
+        <li>Carne de ternera</li>
+        <li>Salsa de tomate</li>
+        <li>Queso parmesano</li>
+    </ul>
+    <p>Guarniciones:</p>
+    <ul>
+        <li>Pan tostado</li>
+        <li>Ensalada de aguacate</li>
+        <li>Salsa de mostaza</li>
+    </ul>
+    <button id="comprar">Comprar</button>
+    <button id="regresar">Regresar al menú</button>
+    <script>
+        const comprarButton = document.getElementById('comprar');
+        const regresarButton = document.getElementById('regresar');
+        regresarButton.addEventListener('click', () => {
+            window.location.href = 'menu.html';
+        });
+        comprarButton.addEventListener('click', () => {
+            const telefono = prompt('Ingrese su número de teléfono:');
+            if (telefono) {
+                const precio = 15.99;
+                alert(`El precio de la Pasta con Carne es $${precio}. ¿Desea continuar con la compra?`);
+                if (confirm('¿Desea continuar con la compra?')) {
+                    alert('Gracias, pronto nos pondremos en contacto con ud.');
+                }
+            }
+        });
+    </script>
+</body>
+</html>

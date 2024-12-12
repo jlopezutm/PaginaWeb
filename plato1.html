@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ensalada de Pollo</title>
+    <link rel="stylesheet" href="estilos-menu.css">
+    <style>
+        body {
+            background-color: #333;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <h1>Ensalada de Pollo</h1>
+    <p>Tiempo de preparación: 15 minutos</p>
+    <p>Ingredientes:</p>
+    <ul>
+        <li>Pollo cocido</li>
+        <li>Lechuga</li>
+        <li>Tomate</li>
+        <li>Pepino</li>
+        <li>Zanahoria</li>
+    </ul>
+    <p>Guarniciones:</p>
+    <ul>
+        <li>Pan tostado</li>
+        <li>Ensalada de aguacate</li>
+        <li>Salsa de mostaza</li>
+    </ul>
+    <button id="comprar">Comprar</button>
+    <button id="regresar">Regresar al menú</button>
+    <script>
+        const comprarButton = document.getElementById('comprar');
+        const regresarButton = document.getElementById('regresar');
+        regresarButton.addEventListener('click', () => {
+            window.location.href = 'menu.html';
+        });
+        comprarButton.addEventListener('click', () => {
+            const telefono = prompt('Ingrese su número de teléfono:');
+            if (telefono) {
+                const precio = 12.99;
+                alert(`El precio de la Ensalada de Pollo es $${precio}. ¿Desea continuar con la compra?`);
+                if (confirm('¿Desea continuar con la compra?')) {
+                    alert('Gracias, pronto nos pondremos en contacto con ud.');
+                }
+            }
+        });
+    </script>
+</body>
+</html>
